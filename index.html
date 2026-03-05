@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colinha Frontend — HTML, CSS e Componentes</title>
+
+    <!-- 🔗 Arquivo de estilos externo -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+
+    <!-- ===========================
+         HEADER — Cabeçalho da página
+         Contém logo e nav principal
+    =========================== -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">
+          <span class="logo-icon">📋</span>
+          <span class="logo-text">Colinha <strong>Frontend</strong></span>
+        </div>
+
+        <!-- NAV — Navegação principal -->
+        <nav class="main-nav" aria-label="Navegação principal">
+          <a href="#html-estrutura">HTML</a>
+          <a href="#html-semantico">Semântico</a>
+          <a href="#html-conteudo">Conteúdo</a>
+          <a href="#css-basico">CSS</a>
+          <a href="#componentes">Componentes</a>
+          <a href="./exercicio.html" target="_blank" rel="noopener noreferrer">Desafios</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===========================
+         HERO — Primeira grande seção
+         Título impactante + subtítulo + CTA
+    =========================== -->
+    <section class="hero" id="hero">
+      <div class="container hero-inner">
+        <p class="hero-eyebrow">📚 Material de Apoio</p>
+        <h1 class="hero-title">
+          Colinha de<br />
+          <span class="highlight">HTML &amp; CSS</span>
+        </h1>
+        <p class="hero-subtitle">
+          Todos os elementos essenciais para construir páginas web.
+          Abra o <strong>F12</strong> e explore o código enquanto lê!
+        </p>
+
+        <!-- CTA — Call to Action -->
+        <a href="#html-estrutura" class="btn btn-primary">Começar a estudar</a>
+        <a href="#componentes" class="btn btn-secondary">Ver componentes</a>
+      </div>
+    </section>
+
+    <!-- ===========================
+         MAIN — Conteúdo principal
+         Único por página
+    =========================== -->
+    <main class="site-main" id="conteudo">
+
+      <!-- SECTION: HTML Estrutura -->
+      <section class="content-section" id="html-estrutura">
+        <div class="container">
+
+          <!-- BREADCRUMB — trilha de navegação -->
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="#">Início</a>
+            <span class="sep">›</span>
+            <span>HTML</span>
+            <span class="sep">›</span>
+            <span>Estrutura</span>
+          </nav>
+
+          <h2 class="section-title">
+            <span class="section-icon">🏗️</span>
+            HTML — Estrutura do Documento
+          </h2>
+
+          <!-- GRID DE CARDS -->
+          <div class="cards-grid">
+
+            <article class="card">
+              <div class="card-header">
+                <code>&lt;!DOCTYPE html&gt;</code>
+              </div>
+              <div class="card-body">
+                <p>Declara que o arquivo é <strong>HTML5</strong>. Sempre na primeira linha.</p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-header">
+                <code>&lt;html&gt;</code>
+              </div>
+              <div class="card-body">
+                <p><strong>Raiz</strong> do documento. Envolve absolutamente tudo.</p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-header">
+                <code>&lt;html lang="pt-BR"&gt;</code>
+              </div>
+              <div class="card-body">
+                <p>Declara que o arquivo é <strong>HTML5</strong> e define idioma principal da página para <strong>acessibilidade e SEO.</strong></p>
+              </div>
+            </article>
+
+
+            <article class="card">
+              <div class="card-header">
+                <code>&lt;head&gt;</code>
+              </div>
+              <div class="card-body">
+                <p><strong>Cabeça</strong> — metadados, título, links de CSS/JS. Não aparece visualmente.</p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-header">
+                <code>&lt;meta charset&gt;</code>
+              </div>
+              <div class="card-body">
+                <p>Define a codificação de caracteres. Use sempre <strong>UTF-8</strong>.</p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-header">
+                <code>&lt;meta viewport&gt;</code>
+              </div>
+              <div class="card-body">
+                <p>Configura escala da página para <strong>dispositivos móveis</strong>.</p>
+              </div>
+            </article>
+
+             <article class="card">
+              <div class="card-header">
+                <code>&lt;content="width=device-width,"&gt;</code>
+              </div>
+              <div class="card-body">
+                <p>Define a lagura igual à <strong>largura</strong> dos <strong>dispositivos móveis</strong>.</p>
+              </div>
+            </article>
+
+             <article class="card">
+              <div class="card-header">
+                <code>&lt;content="initial-scale=1.0"&gt;</code>
+              </div>
+              <div class="card-body">
+                <p>Define o <strong>zoom inicial</strong> da página.</p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-header">
+                <code>&lt;title&gt;</code>
+              </div>
+              <div class="card-body">
+                <p>Define o <strong>título da aba</strong> no navegador.</p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-header">
+                <code>&lt;link rel="stylesheet"&gt;</code>
+              </div>
+              <div class="card-body">
+                <p>Conecta um <strong>arquivo CSS externo</strong> à página.</p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-header">
+                <code>&lt;script&gt;</code>
+              </div>
+              <div class="card-body">
+                <p>Importa ou escreve <strong>JavaScript</strong>.</p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-header">
+                <code>&lt;body&gt;</code>
+              </div>
+              <div class="card-body">
+                <p><strong>Corpo</strong> — todo o conteúdo visível fica aqui.</p>
+              </div>
+            </article>
+
+          </div><!-- /cards-grid -->
+        </div>
+      </section>
+
+      <!-- SECTION: HTML Semântico -->
+      <section class="content-section section-alt" id="html-semantico">
+        <div class="container">
+          <h2 class="section-title">
+            <span class="section-icon">📐</span>
+            HTML — Tags Semânticas de Layout
+          </h2>
+
+          <!-- ACCORDION — lista expansível -->
+          <div class="accordion">
+
+            <details class="accordion-item">
+              <summary class="accordion-trigger">
+                <code>&lt;header&gt;</code>
+                <span class="accordion-desc">Cabeçalho da página ou seção</span>
+              </summary>
+              <div class="accordion-content">
+                <p>Contém elementos introdutórios como <strong>logo, título e navegação</strong>. Pode existir mais de um por página (um no body, um dentro de um article).</p>
+              </div>
+            </details>
+
+            <details class="accordion-item">
+              <summary class="accordion-trigger">
+                <code>&lt;nav&gt;</code>
+                <span class="accordion-desc">Navegação principal</span>
+              </summary>
+              <div class="accordion-content">
+                <p>Agrupa os <strong>links de navegação</strong> mais importantes. Geralmente fica dentro do header.</p>
+              </div>
+            </details>
+
+            <details class="accordion-item">
+              <summary class="accordion-trigger">
+                <code>&lt;main&gt;</code>
+                <span class="accordion-desc">Conteúdo principal — único por página</span>
+              </summary>
+              <div class="accordion-content">
+                <p>Deve aparecer <strong>apenas uma vez</strong> por página. Contém o conteúdo central, excluindo header, footer e aside.</p>
+              </div>
+            </details>
+
+            <details class="accordion-item">
+              <summary class="accordion-trigger">
+                <code>&lt;section&gt;</code>
+                <span class="accordion-desc">Seção temática</span>
+              </summary>
+              <div class="accordion-content">
+                <p>Agrupa conteúdo com <strong>tema relacionado</strong>. Geralmente tem um título (h2, h3). Ex: seção de serviços, seção de contato.</p>
+              </div>
+            </details>
+
+            <details class="accordion-item">
+              <summary class="accordion-trigger">
+                <code>&lt;article&gt;</code>
+                <span class="accordion-desc">Conteúdo independente</span>
+              </summary>
+              <div class="accordion-content">
+                <p>Conteúdo que <strong>faz sentido sozinho</strong>, fora do contexto da página. Ex: post de blog, card de produto, notícia.</p>
+              </div>
+            </details>
+
+            <details class="accordion-item">
+              <summary class="accordion-trigger">
+                <code>&lt;aside&gt;</code>
+                <span class="accordion-desc">Conteúdo lateral/complementar</span>
+              </summary>
+              <div class="accordion-content">
+                <p>Conteúdo <strong>relacionado mas não essencial</strong>. Ex: sidebar, banners, links relacionados.</p>
+              </div>
+            </details>
+
+            <details class="accordion-item">
+              <summary class="accordion-trigger">
+                <code>&lt;footer&gt;</code>
+                <span class="accordion-desc">Rodapé</span>
+              </summary>
+              <div class="accordion-content">
+                <p>Rodapé da página ou seção. Contém <strong>copyright, links, contato</strong> e informações secundárias.</p>
+              </div>
+            </details>
+
+            <details class="accordion-item">
+              <summary class="accordion-trigger">
+                <code>&lt;div&gt;</code>
+                <span class="accordion-desc">Divisão genérica (sem semântica)</span>
+              </summary>
+              <div class="accordion-content">
+                <p>Usado apenas para <strong>agrupar e estilizar</strong>. Não tem significado semântico. Use quando nenhuma tag semântica se aplica.</p>
+              </div>
+            </details>
+
+            <details class="accordion-item">
+              <summary class="accordion-trigger">
+                <code>&lt;span&gt;</code>
+                <span class="accordion-desc">Elemento inline genérico</span>
+              </summary>
+              <div class="accordion-content">
+                <p>Igual ao div, mas <strong>inline</strong> — não quebra linha. Usado para estilizar partes de um texto.</p>
+              </div>
+            </details>
+
+          </div><!-- /accordion -->
+        </div>
+      </section>
+
+      <!-- SECTION: Tags de Conteúdo -->
+      <section class="content-section" id="html-conteudo">
+        <div class="container">
+          <h2 class="section-title">
+            <span class="section-icon">✍️</span>
+            HTML — Tags de Conteúdo
+          </h2>
+
+          <!-- TABS -->
+          <div class="tabs">
+            <div class="tab-list" role="tablist">
+              <button class="tab-btn active" onclick="showTab('textos')">Textos</button>
+              <button class="tab-btn" onclick="showTab('midia')">Mídia</button>
+              <button class="tab-btn" onclick="showTab('formularios')">Formulários</button>
+              <button class="tab-btn" onclick="showTab('listas')">Listas</button>
+            </div>
+
+            <div id="tab-textos" class="tab-panel active">
+              <ul class="tag-list">
+                <li><code>&lt;h1&gt;</code> até <code>&lt;h6&gt;</code> — Títulos em hierarquia. h1 = mais importante, h6 = menos.</li>
+                <li><code>&lt;p&gt;</code> — Parágrafo de texto.</li>
+                <li><code>&lt;a href=""&gt;</code> — Link/âncora para outra página ou seção.</li>
+                <li><code>&lt;strong&gt;</code> — Negrito com ênfase semântica (importante).</li>
+                <li><code>&lt;em&gt;</code> — Itálico com ênfase semântica.</li>
+                <li><code>&lt;br&gt;</code> — Quebra de linha forçada.</li>
+                <li><code>&lt;hr&gt;</code> — Linha divisória horizontal.</li>
+                <li><code>&lt;blockquote&gt;</code> — Citação em bloco.</li>
+                <li><code>&lt;code&gt;</code> — Trecho de código inline.</li>
+                <li><code>&lt;pre&gt;</code> — Texto pré-formatado, respeita espaços e quebras.</li>
+              </ul>
+            </div>
+
+            <div id="tab-midia" class="tab-panel">
+              <ul class="tag-list">
+                <li><code>&lt;img src="" alt=""&gt;</code> — Imagem. O alt descreve para acessibilidade e SEO.</li>
+                <li><code>&lt;figure&gt;</code> — Envolve imagem com legenda.</li>
+                <li><code>&lt;figcaption&gt;</code> — Legenda da figura.</li>
+                <li><code>&lt;video&gt;</code> — Vídeo embutido.</li>
+                <li><code>&lt;audio&gt;</code> — Áudio embutido.</li>
+                <li><code>&lt;iframe&gt;</code> — Janela que carrega outra página (YouTube, mapas).</li>
+                <li><code>&lt;svg&gt;</code> — Gráfico vetorial embutido diretamente no HTML.</li>
+              </ul>
+            </div>
+
+            <div id="tab-formularios" class="tab-panel">
+              <ul class="tag-list">
+                <li><code>&lt;form&gt;</code> — Formulário de envio de dados.</li>
+                <li><code>&lt;input type=""&gt;</code> — Campo de entrada (text, email, password, checkbox, radio...).</li>
+                <li><code>&lt;label for=""&gt;</code> — Rótulo de um input. O "for" liga ao id do input.</li>
+                <li><code>&lt;textarea&gt;</code> — Campo de texto longo e multilinha.</li>
+                <li><code>&lt;select&gt;</code> — Menu suspenso (dropdown).</li>
+                <li><code>&lt;option&gt;</code> — Opção dentro do select.</li>
+                <li><code>&lt;button type=""&gt;</code> — Botão (submit, button, reset).</li>
+                <li><code>&lt;fieldset&gt;</code> — Agrupa campos relacionados.</li>
+                <li><code>&lt;legend&gt;</code> — Título do fieldset.</li>
+              </ul>
+            </div>
+
+            <div id="tab-listas" class="tab-panel">
+              <ul class="tag-list">
+                <li><code>&lt;ul&gt;</code> — Lista não ordenada (bolinhas).</li>
+                <li><code>&lt;ol&gt;</code> — Lista ordenada (números).</li>
+                <li><code>&lt;li&gt;</code> — Item de lista (dentro de ul ou ol).</li>
+                <li><code>&lt;dl&gt;</code> — Lista de definições.</li>
+                <li><code>&lt;dt&gt;</code> — Termo da definição.</li>
+                <li><code>&lt;dd&gt;</code> — Descrição do termo.</li>
+                <li><code>&lt;table&gt;</code> — Tabela.</li>
+                <li><code>&lt;tr&gt;</code> — Linha da tabela.</li>
+                <li><code>&lt;th&gt;</code> — Célula de cabeçalho da tabela.</li>
+                <li><code>&lt;td&gt;</code> — Célula de dados da tabela.</li>
+              </ul>
+            </div>
+
+          </div><!-- /tabs -->
+        </div>
+      </section>  
+        <section class="content-section" id="arquitetura-pasta">
+          <div class="container">
+            <h2 class="section-title">
+              <span class="section-icon">📁</span>
+                Boas Práticas — Organização de Projeto
+            </h2>
+            
+            <!-- TABS -->
+            <div class="tabs">
+              <div class="tab-list" role="tablist">
+                <button class="tab-btn active" onclick="showTab('pastas')">Pastas</button>
+                <button class="tab-btn" onclick="showTab('arquivos')">Arquivos</button>
+              </div>
+
+              <div id="tab-pastas" class="tab-panel active">
+                <ul class="tag-list">
+                  <p> 💡 Sempre comece criando uma pasta com o nome do seu projeto.</p>
+                  <li> 📁 <strong>Pasta raiz</strong> — É a pasta principal onde todo o projeto está armazenadoe sua função é Organizar e conter todos os arquivos e subpastas do site.</li>
+                  <li> 📁 <strong> Pasta assets</strong> — É a pasta Pasta que armazena recursos adicionais do projeto e evita deixar arquivos soltos na raiz. Centralizar arquivos de apoio como imagens, estilos e scripts.</li>
+                  <li> 📁 <strong>Pasta image</strong> — É uma subpasta dentro de assets destinada a imagens, armazenar imagens usadas no site e organiza arquivos visuais separadamente de código.</li>
+                  <li> 📁 <strong>Pasta css</strong> — É a pasta destinada aos arquivos de estilo, Separar a parte visual do HTML e Mantém o projeto organizado e modular.</li>
+                  <li> 📁 <strong>Pasta js</strong> — É a pasta destinada aos scripts JavaScript. É responsável por armazenar arquivos responsáveis por interações e comportamentos dinâmicos (mantém o JavaScript separado da estrutura e do estilo.).</li>     
+                </ul>
+              </div>
+
+              <div id="tab-arquivos" class="tab-panel">
+                <ul class="tag-list">
+                  <li>📄 <strong>index.html</strong> — Arquivo principal do site, contém a estrutura HTML da página. É o arquivo que o navegador abre por padrão quando você acessa o projeto.</li>
+                  <li>📄 <strong>style.css</strong> —  É o arquivo principal de estilização,Define cores, layout, tipografia e responsividade. em ele, a página teria apenas estrutura, sem design. </li>
+                  <li>📄 <strong>imagem.png</strong> — Arquivo de imagem do projeto. Pode ser usada em <code>&lt;img&gt;</code>, background no CSS ou ícones. Deve estar corretamente referenciada no código..</li>
+                </ul>
+              </div>
+
+          </div><!-- /tabs -->
+        </div>
+      </section>
+
+      <!-- SECTION: CSS Básico -->
+      <section class="content-section section-alt" id="css-basico">
+        <div class="container">
+          <h2 class="section-title">
+            <span class="section-icon">🎨</span>
+            CSS — Propriedades Essenciais
+          </h2>
+
+          <div class="css-grid">
+
+            <div class="css-group">
+              <h3 class="css-group-title">🔤 Tipografia</h3>
+              <ul class="tag-list">
+                <li><code>font-family</code> — Fonte usada no texto.</li>
+                <li><code>font-size</code> — Tamanho da fonte (px, rem, em).</li>
+                <li><code>font-weight</code> — Espessura: 400 = normal, 700 = bold.</li>
+                <li><code>line-height</code> — Espaçamento entre linhas.</li>
+                <li><code>color</code> — Cor do texto.</li>
+                <li><code>text-align</code> — Alinhamento (left, center, right, justify).</li>
+                <li><code>letter-spacing</code> — Espaço entre letras.</li>
+                <li><code>text-decoration</code> — Sublinhado, riscado, etc.</li>
+                <li><code>text-transform</code> — uppercase, lowercase, capitalize.</li>
+              </ul>
+            </div>
+
+            <div class="css-group">
+              <h3 class="css-group-title">📦 Box Model</h3>
+              <ul class="tag-list">
+                <li><code>width / height</code> — Largura e altura.</li>
+                <li><code>padding</code> — Espaçamento <em>interno</em> (dentro da borda).</li>
+                <li><code>margin</code> — Espaçamento <em>externo</em> (fora da borda).</li>
+                <li><code>border</code> — Borda do elemento.</li>
+                <li><code>border-radius</code> — Arredondamento dos cantos.</li>
+                <li><code>box-shadow</code> — Sombra na caixa.</li>
+                <li><code>box-sizing</code> — Define como width/height são calculados.</li>
+                <li><code>max-width / min-width</code> — Limites de largura.</li>
+              </ul>
+            </div>
+
+            <div class="css-group">
+              <h3 class="css-group-title">📐 Layout</h3>
+              <ul class="tag-list">
+                <li><code>display</code> — block, inline, flex, grid, none.</li>
+                <li><code>flexbox</code> — Layout em linha ou coluna (1D).</li>
+                <li><code>grid</code> — Layout em grade (2D).</li>
+                <li><code>position</code> — static, relative, absolute, fixed, sticky.</li>
+                <li><code>top/left/right/bottom</code> — Coordenadas com position ativo.</li>
+                <li><code>z-index</code> — Camada: quem fica na frente.</li>
+                <li><code>overflow</code> — hidden, scroll, auto, visible.</li>
+                <li><code>gap</code> — Espaço entre itens no flex/grid.</li>
+              </ul>
+            </div>
+
+            <div class="css-group">
+              <h3 class="css-group-title">🖼️ Visual</h3>
+              <ul class="tag-list">
+                <li><code>background-color</code> — Cor de fundo.</li>
+                <li><code>background-image</code> — Imagem de fundo.</li>
+                <li><code>background-size</code> — cover, contain, tamanho.</li>
+                <li><code>opacity</code> — Transparência de 0 a 1.</li>
+                <li><code>transition</code> — Animação suave ao mudar estado.</li>
+                <li><code>transform</code> — Rotacionar, escalar, mover.</li>
+                <li><code>cursor</code> — Tipo do cursor do mouse.</li>
+                <li><code>filter</code> — blur, brightness, grayscale, etc.</li>
+              </ul>
+            </div>
+
+            <div class="css-group">
+              <h3 class="css-group-title">⚡ Flexbox</h3>
+              <ul class="tag-list">
+                <li><code>display: flex</code> — Ativa o flexbox no container.</li>
+                <li><code>flex-direction</code> — row (horizontal) ou column (vertical).</li>
+                <li><code>justify-content</code> — Alinha no eixo principal (center, space-between...).</li>
+                <li><code>align-items</code> — Alinha no eixo cruzado (center, stretch...).</li>
+                <li><code>flex-wrap</code> — Permite quebra de linha dos itens.</li>
+                <li><code>flex: 1</code> — Item cresce para preencher o espaço.</li>
+                <li><code>gap</code> — Espaço entre os itens filhos.</li>
+              </ul>
+            </div>
+
+            <div class="css-group">
+              <h3 class="css-group-title">🔲 Grid</h3>
+              <ul class="tag-list">
+                <li><code>display: grid</code> — Ativa o grid no container.</li>
+                <li><code>grid-template-columns</code> — Define as colunas (ex: repeat(3, 1fr)).</li>
+                <li><code>grid-template-rows</code> — Define as linhas.</li>
+                <li><code>grid-column</code> — Quantas colunas o item ocupa.</li>
+                <li><code>grid-row</code> — Quantas linhas o item ocupa.</li>
+                <li><code>fr</code> — Fração do espaço disponível.</li>
+                <li><code>gap</code> — Espaço entre linhas e colunas.</li>
+              </ul>
+            </div>
+
+          </div><!-- /css-grid -->
+        </div>
+      </section>
+
+      <!-- =====================================================
+           SECTION: COMPONENTES VISUAIS
+           Cada bloco abaixo é um componente real e interativo.
+           Abra o F12, clique no ícone de seta (Inspecionar)
+           e selecione qualquer elemento para ver o HTML e CSS!
+      ====================================================== -->
+      <section class="content-section" id="componentes">
+        <div class="container">
+          <h2 class="section-title">
+            <span class="section-icon">🖼️</span>
+            Componentes — Exemplos Visuais Interativos
+          </h2>
+          <p class="section-desc">
+            Cada componente abaixo é <strong>real e funcional</strong>.
+            Pressione <kbd>F12</kbd> → clique na setinha ↖ → selecione qualquer elemento para inspecionar!
+          </p>
+
+          <!-- =====================
+               COMPONENTE 1: NAVBAR
+               Tag: <nav>
+               CSS: display flex, gap, position sticky
+          ===================== -->
+          <div class="comp-showcase">
+            <div class="comp-label">
+              <span class="comp-tag">nav</span>
+              <h3>Navbar</h3>
+              <p>Barra de navegação com links. Usa <code>display: flex</code> e <code>gap</code>.</p>
+            </div>
+            <div class="comp-preview">
+              <!-- NAVBAR — exemplo visual -->
+              <nav class="ex-navbar">
+                <div class="ex-navbar-logo">🚀 MarcaX</div>
+                <ul class="ex-navbar-links">
+                  <li><a href="#">Início</a></li>
+                  <li><a href="#">Sobre</a></li>
+                  <li><a href="#">Serviços</a></li>
+                  <li><a href="#" class="ex-navbar-cta">Contato</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <!-- =====================
+               COMPONENTE 2: HERO
+               Tag: <section class="hero">
+               CSS: background gradient, text-align center, padding grande
+          ===================== -->
+          <div class="comp-showcase">
+            <div class="comp-label">
+              <span class="comp-tag">section.hero</span>
+              <h3>Hero</h3>
+              <p>Primeira seção da página. Gradiente de fundo, título grande e botões CTA.</p>
+            </div>
+            <div class="comp-preview">
+              <!-- HERO — exemplo visual -->
+              <section class="ex-hero">
+                <p class="ex-hero-eyebrow">✨ Novidade</p>
+                <h2 class="ex-hero-title">Transforme sua <span>Ideia</span> em Produto</h2>
+                <p class="ex-hero-sub">A plataforma mais completa para lançar seu projeto digital.</p>
+                <div class="ex-hero-btns">
+                  <button class="ex-btn-primary">Começar grátis</button>
+                  <button class="ex-btn-ghost">Ver demo</button>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <!-- =====================
+               COMPONENTE 3: CARD
+               Tag: <article class="card">
+               CSS: border-radius, box-shadow, overflow hidden
+          ===================== -->
+          <div class="comp-showcase">
+            <div class="comp-label">
+              <span class="comp-tag">article.card</span>
+              <h3>Card</h3>
+              <p>Bloco com imagem, texto e botão. Usa <code>border-radius</code> e <code>box-shadow</code>.</p>
+            </div>
+            <div class="comp-preview">
+              <!-- GRID DE CARDS — exemplo visual -->
+              <div class="ex-cards-grid">
+
+                <!-- CARD 1 -->
+                <article class="ex-card">
+                  <div class="ex-card-img" style="background: linear-gradient(135deg,#667eea,#764ba2)">
+                    <span>🎨</span>
+                  </div>
+                  <div class="ex-card-body">
+                    <h4>Design UI</h4>
+                    <p>Aprenda a criar interfaces modernas e acessíveis.</p>
+                    <button class="ex-card-btn">Saiba mais →</button>
+                  </div>
+                </article>
+
+                <!-- CARD 2 -->
+                <article class="ex-card">
+                  <div class="ex-card-img" style="background: linear-gradient(135deg,#f093fb,#f5576c)">
+                    <span>⚡</span>
+                  </div>
+                  <div class="ex-card-body">
+                    <h4>Performance</h4>
+                    <p>Otimize sua aplicação para carregar mais rápido.</p>
+                    <button class="ex-card-btn">Saiba mais →</button>
+                  </div>
+                </article>
+
+                <!-- CARD 3 -->
+                <article class="ex-card">
+                  <div class="ex-card-img" style="background: linear-gradient(135deg,#4facfe,#00f2fe)">
+                    <span>🔒</span>
+                  </div>
+                  <div class="ex-card-body">
+                    <h4>Segurança</h4>
+                    <p>Proteja seus dados com as melhores práticas.</p>
+                    <button class="ex-card-btn">Saiba mais →</button>
+                  </div>
+                </article>
+
+              </div><!-- /ex-cards-grid -->
+            </div>
+          </div>
+
+          <!-- =====================
+               COMPONENTE 4: BANNER
+               Tag: <div class="banner">
+               CSS: background-image, background-size cover, position relative
+          ===================== -->
+          <div class="comp-showcase">
+            <div class="comp-label">
+              <span class="comp-tag">div.banner</span>
+              <h3>Banner</h3>
+              <p>Faixa visual com imagem de fundo e texto sobreposto. Usa <code>position: relative</code> e <code>overlay</code>.</p>
+            </div>
+            <div class="comp-preview">
+              <!-- BANNER — exemplo visual -->
+              <div class="ex-banner">
+                <!-- OVERLAY — camada escura por cima do fundo -->
+                <div class="ex-banner-overlay"></div>
+                <div class="ex-banner-content">
+                  <p class="ex-banner-tag">🔥 Oferta por tempo limitado</p>
+                  <h3>50% OFF em todos os cursos</h3>
+                  <p>Use o cupom <strong>FRONTEND50</strong> até domingo.</p>
+                  <button class="ex-btn-primary">Aproveitar oferta</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =====================
+               COMPONENTE 5: CAROUSEL / SLIDER
+               Tag: <div class="carousel">
+               CSS: overflow hidden, display flex, transition transform
+          ===================== -->
+          <div class="comp-showcase">
+            <div class="comp-label">
+              <span class="comp-tag">div.carousel</span>
+              <h3>Carousel / Slider</h3>
+              <p>Slides que alternam com botões. Usa <code>overflow: hidden</code> e <code>transform: translateX</code>.</p>
+            </div>
+            <div class="comp-preview">
+              <!-- CAROUSEL — exemplo visual -->
+              <div class="ex-carousel-wrapper">
+                <!-- Container que esconde os slides que saem fora -->
+                <div class="ex-carousel-track-container">
+                  <!-- Track: todos os slides em linha -->
+                  <div class="ex-carousel-track" id="carouselTrack">
+                    <div class="ex-slide" style="background:linear-gradient(135deg,#1a1a2e,#16213e)">
+                      <span>🌍</span><p>Slide 1 — Explore o Mundo</p>
+                    </div>
+                    <div class="ex-slide" style="background:linear-gradient(135deg,#0f3460,#533483)">
+                      <span>🚀</span><p>Slide 2 — Lance seu Projeto</p>
+                    </div>
+                    <div class="ex-slide" style="background:linear-gradient(135deg,#533483,#e94560)">
+                      <span>💡</span><p>Slide 3 — Novas Ideias</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Botões de navegação -->
+                <button class="ex-carousel-btn ex-carousel-prev" onclick="moverSlide(-1)">‹</button>
+                <button class="ex-carousel-btn ex-carousel-next" onclick="moverSlide(1)">›</button>
+                <!-- Indicadores (bolinhas) -->
+                <div class="ex-carousel-dots">
+                  <span class="ex-dot active" onclick="irParaSlide(0)"></span>
+                  <span class="ex-dot" onclick="irParaSlide(1)"></span>
+                  <span class="ex-dot" onclick="irParaSlide(2)"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =====================
+               COMPONENTE 6: MODAL + OVERLAY
+               Tag: <dialog> ou <div role="dialog">
+               CSS: position fixed, z-index alto, backdrop semitransparente
+          ===================== -->
+          <div class="comp-showcase">
+            <div class="comp-label">
+              <span class="comp-tag">div.modal + div.overlay</span>
+              <h3>Modal + Overlay</h3>
+              <p>Janela sobre a página. O overlay escurece o fundo. Usa <code>position: fixed</code> e <code>z-index</code>.</p>
+            </div>
+            <div class="comp-preview">
+              <div class="ex-modal-trigger-area">
+                <p class="ex-trigger-hint">Clique no botão para abrir o modal:</p>
+                <button class="ex-btn-primary" onclick="abrirModal()">Abrir Modal</button>
+              </div>
+
+              <!-- OVERLAY — camada escura que bloqueia o fundo -->
+              <div class="ex-overlay" id="modalOverlay" onclick="fecharModal()"></div>
+
+              <!-- MODAL — janela de diálogo -->
+              <div class="ex-modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+                <div class="ex-modal-header">
+                  <h4 id="modalTitulo">📬 Assine a Newsletter</h4>
+                  <!-- Botão de fechar -->
+                  <button class="ex-modal-close" onclick="fecharModal()" aria-label="Fechar modal">✕</button>
+                </div>
+                <div class="ex-modal-body">
+                  <p>Receba conteúdo exclusivo sobre desenvolvimento web toda semana.</p>
+                  <input type="email" class="ex-input" placeholder="seu@email.com" />
+                </div>
+                <div class="ex-modal-footer">
+                  <button class="ex-btn-primary" onclick="fecharModal()">Assinar grátis</button>
+                  <button class="ex-btn-ghost" onclick="fecharModal()">Agora não</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =====================
+               COMPONENTE 7: TOAST / SNACKBAR
+               Tag: <div class="toast" role="alert">
+               CSS: position fixed, bottom, animation slideIn
+          ===================== -->
+          <div class="comp-showcase">
+            <div class="comp-label">
+              <span class="comp-tag">div.toast</span>
+              <h3>Toast / Snackbar</h3>
+              <p>Notificação temporária na borda da tela. Usa <code>position: fixed</code> e <code>animation</code>.</p>
+            </div>
+            <div class="comp-preview">
+              <div class="ex-modal-trigger-area">
+                <p class="ex-trigger-hint">Clique para ver o toast aparecer:</p>
+                <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+                  <button class="ex-btn-primary" onclick="mostrarToast('success')">✅ Sucesso</button>
+                  <button class="ex-btn-primary" style="background:#ef4444" onclick="mostrarToast('error')">❌ Erro</button>
+                  <button class="ex-btn-primary" style="background:#f59e0b" onclick="mostrarToast('warning')">⚠️ Aviso</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TOAST — renderizado fora do componente, fixo na tela -->
+          <div class="ex-toast" id="toast" role="alert" aria-live="polite"></div>
+
+          <!-- =====================
+               COMPONENTE 8: SKELETON
+               Tag: <div class="skeleton">
+               CSS: background gradient animado, border-radius
+          ===================== -->
+          <div class="comp-showcase">
+            <div class="comp-label">
+              <span class="comp-tag">div.skeleton</span>
+              <h3>Skeleton Loader</h3>
+              <p>Placeholder animado enquanto o conteúdo carrega. Usa <code>@keyframes</code> e <code>background-position</code>.</p>
+            </div>
+            <div class="comp-preview">
+              <!-- SKELETON — exemplo visual -->
+              <div class="ex-skeleton-card">
+                <!-- Thumbnail skeleton -->
+                <div class="skeleton skeleton-img"></div>
+                <div class="ex-skeleton-info">
+                  <!-- Linha de texto skeleton -->
+                  <div class="skeleton skeleton-title"></div>
+                  <div class="skeleton skeleton-text"></div>
+                  <div class="skeleton skeleton-text short"></div>
+                  <div class="skeleton skeleton-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =====================
+               COMPONENTE 9: BREADCRUMB
+               Tag: <nav aria-label="Breadcrumb"> + <ol>
+               CSS: display flex, gap, separador via ::before
+          ===================== -->
+          <div class="comp-showcase">
+            <div class="comp-label">
+              <span class="comp-tag">nav.breadcrumb &gt; ol &gt; li</span>
+              <h3>Breadcrumb</h3>
+              <p>Trilha de navegação. Usa <code>display: flex</code> e o separador via <code>::before</code> no CSS.</p>
+            </div>
+            <div class="comp-preview">
+              <!-- BREADCRUMB — exemplo visual -->
+              <nav aria-label="Breadcrumb" class="ex-breadcrumb-wrap">
+                <ol class="ex-breadcrumb">
+                  <li><a href="#">🏠 Início</a></li>
+                  <li><a href="#">Cursos</a></li>
+                  <li><a href="#">Frontend</a></li>
+                  <li aria-current="page">HTML &amp; CSS</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+
+          <!-- =====================
+               COMPONENTE 10: SIDEBAR + LAYOUT
+               Tag: <div class="layout"> com <aside> e <main>
+               CSS: display grid, grid-template-columns
+          ===================== -->
+          <div class="comp-showcase">
+            <div class="comp-label">
+              <span class="comp-tag">aside.sidebar + main</span>
+              <h3>Sidebar</h3>
+              <p>Layout de duas colunas com barra lateral. Usa <code>display: grid</code> e <code>grid-template-columns</code>.</p>
+            </div>
+            <div class="comp-preview">
+              <!-- LAYOUT COM SIDEBAR — exemplo visual -->
+              <div class="ex-layout">
+                <!-- ASIDE — barra lateral -->
+                <aside class="ex-sidebar">
+                  <p class="ex-sidebar-title">Categorias</p>
+                  <ul class="ex-sidebar-list">
+                    <li class="active">📄 HTML</li>
+                    <li>🎨 CSS</li>
+                    <li>⚡ JavaScript</li>
+                    <li>⚛️ React</li>
+                  </ul>
+                </aside>
+                <!-- MAIN — conteúdo principal -->
+                <main class="ex-main-content">
+                  <h4>Artigos sobre HTML</h4>
+                  <p>Selecione uma categoria na sidebar para filtrar os artigos disponíveis.</p>
+                </main>
+              </div>
+            </div>
+          </div>
+
+          <!-- =====================
+               COMPONENTE 11: SKYSCRAPER / CORROCEU
+               Tag: <div class="skyscraper">
+               CSS: width estreita (120-160px), height grande, position
+          ===================== -->
+          <div class="comp-showcase">
+            <div class="comp-label">
+              <span class="comp-tag">div.skyscraper</span>
+              <h3>Skyscraper / Corroceu</h3>
+              <p>Banner publicitário alto e estreito. O nome "arranha-céu" vem da forma alongada.</p>
+            </div>
+            <div class="comp-preview">
+              <!-- SKYSCRAPER — exemplo visual -->
+              <div class="ex-skyscraper-demo">
+                <div class="ex-page-content">
+                  <p>Conteúdo da página ao lado do banner...</p>
+                  <p>Parágrafo de texto qualquer.</p>
+                  <p>Mais conteúdo aqui embaixo.</p>
+                </div>
+                <!-- O BANNER CORROCEU -->
+                <div class="ex-skyscraper">
+                  <p class="ex-sky-label">Publicidade</p>
+                  <p class="ex-sky-title">Anuncie aqui</p>
+                  <p class="ex-sky-sub">160 × 600</p>
+                  <button class="ex-sky-btn">Saiba mais</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =====================
+               COMPONENTE 12: ABOVE THE FOLD
+               Tag: conceito visual
+               CSS: height: 100vh (viewport height)
+          ===================== -->
+          <div class="comp-showcase">
+            <div class="comp-label">
+              <span class="comp-tag">conceito: 100vh</span>
+              <h3>Above the Fold</h3>
+              <p>Tudo visível sem rolar. Usa <code>height: 100vh</code> para ocupar a altura da tela toda.</p>
+            </div>
+            <div class="comp-preview">
+              <!-- ABOVE THE FOLD — diagrama visual -->
+              <div class="ex-fold-demo">
+                <div class="ex-fold-screen">
+                  <div class="ex-fold-above">
+                    <span>👆 Above the Fold</span>
+                    <small>Visível sem rolar — o mais importante fica aqui</small>
+                  </div>
+                  <div class="ex-fold-line">
+                    <span>— Linha do Fold —</span>
+                  </div>
+                  <div class="ex-fold-below">
+                    <span>👇 Below the Fold</span>
+                    <small>Só aparece depois de rolar a página</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /container -->
+      </section>
+      <!-- /SECTION COMPONENTES -->
+
+    </main>
+    <!-- /MAIN -->
+
+    <!-- ===========================
+         FOOTER — Rodapé da página
+    =========================== -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>Colinha Frontend — Material de apoio para estudantes de desenvolvimento web.</p>
+        <p class="footer-tip">💡 Dica: Pressione <kbd>F12</kbd> e explore o código desta página enquanto estuda!</p>
+      </div>
+    </footer>
+
+    <!-- 🔗 JavaScript externo (no final do body para não travar o carregamento) -->
+    <script src="./assets/js/script.js"></script>
+
+  </body>
+</html>

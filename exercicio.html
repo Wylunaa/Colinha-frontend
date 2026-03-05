@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colinha Frontend — HTML, CSS e Componentes</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <!-- ===========================
+         HEADER — Cabeçalho da página
+         Contém logo e nav principal
+    =========================== -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">
+          <span class="logo-icon">📋</span>
+          <span class="logo-text">Colinha <strong>Frontend</strong></span>
+        </div>
+
+        <!-- NAV — Navegação principal -->
+        <nav class="main-nav" aria-label="Navegação principal">
+          <a href="./index.html#html">HTML</a>
+          <a href="./index.html#html-semantico">Semântico</a>
+          <a href="./index.html#html-conteudo">Conteúdo</a>
+          <a href="./index.html#css-basico">CSS</a>
+          <a href="./index.html#componentes">Componentes</a>
+          <a href="./exercicio.html#desafios" target="_blank ">Desafios</a>
+        </nav>
+      </div>
+    </header>
+    <!-- ===========================
+         HERO — Primeira grande seção
+         Título impactante + subtítulo + CTA
+    =========================== -->
+    <section class="hero" id="hero">
+      <div class="container hero-inner">
+        <p class="hero-eyebrow">📚 DESAFIO FRONTEND</p>
+        <h1 class="hero-title">
+        Exercícios Práticos<br />
+          <span class="highlight">HTML &amp; CSS  E JAVASCRIPT</span>
+        </h1>
+        <p class="hero-subtitle">
+          Pratique HTML, CSS e JavaScript resolvendo os desafios abaixo. 
+          Abra o <strong>F12</strong> e explore o código enquanto lê!
+        </p>
+
+        <!-- CTA — Call to Action -->
+        <a href="#resolver-exercicio" class="btn btn-primary">Resolver os desafios</a>
+        <a href="./index.html#componentes" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Ver componentes</a>
+      </div>  
+        <!-- Barra de progresso — atualizada pelo JS -->
+    <div class="progress-wrap">
+        <span class="progress-label">Progresso</span>
+        <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="progressFill" style="width: 0%"></div>
+    </div>
+    <span class="progress-count" id="progressCount">0 / 13</span>
+  </div>
+    </section>
+
+    <main>
+    <!-- TEMPLATE DE SEÇÃO -->
+    <!-- HTML -->
+    <section class="content-section section-alt" >
+        <div class="container">
+        <h3 class="section-title"> 📁 Exercícios de HTML</h3>
+
+        <div class="exercise-grid">
+
+            <!-- Exercício -->
+            <div class="exercise-card" id="resolver-exercicio">
+            <h4>Exercício 1</h4>
+            <p>Crie um título e um parágrafo usando tags semânticas.</p>
+            <button class="btn-toggle">Mostrar Resposta</button>
+
+            <div class="exercise-answer">
+                <div class="tabs">
+                <button class="tab active" data-tab="html">HTML</button>
+                <button class="tab" data-tab="css">CSS</button>
+                <button class="tab" data-tab="js">JS</button>
+                </div>
+
+                <pre class="code-block active" data-content="html">
+                    &lt;h1&gt;Meu Título&lt;/h1&gt;
+                    &lt;p&gt;Este é um parágrafo.&lt;/p&gt;
+                </pre>
+
+                <pre class="code-block" data-content="css">
+                    /* Não necessário */
+                </pre>
+
+                <pre class="code-block" data-content="js">
+                    /* Não necessário */
+                </pre>
+            </div>
+            </div>
+
+              <div class="exercise-card" id="resolver-exercicio">
+            <h4>Exercício 2</h4>
+            <p>Crie uma lista de navegação usando &lt;nav&gt;, &lt;ul&gt; e &lt;li&gt; com 3 links.</p>
+            <button class="btn-toggle">Mostrar Resposta</button>
+
+            <div class="exercise-answer">
+                <div class="tabs">
+                <button class="tab active" data-tab="html">HTML</button>
+                <button class="tab" data-tab="css">CSS</button>
+                <button class="tab" data-tab="js">JS</button>
+                </div>
+
+                <pre class="code-block active" data-content="html">
+                    &lt;nav&gt;
+                    Meu Título&lt;/h1&gt;
+                    &lt;/nav&gt;Este é um parágrafo.&lt;/p&gt;
+                </pre>
+
+                <pre class="code-block" data-content="css">
+                    /* Não necessário */
+                </pre>
+
+                <pre class="code-block" data-content="js">
+                    /* Não necessário */
+                </pre>
+            </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <!-- HTML + CSS -->
+    <section class="content-section">
+        <div class="container">
+        <h3 class="section-title">🧢 Exercícios de HTML + CSS</h3>
+
+        <div class="exercise-grid">
+            <div class="exercise-card">
+            <h4>Exercício 1</h4>
+            <p>Crie um botão estilizado com hover.</p>
+            <button class="btn-toggle">Mostrar Resposta</button>
+
+            <div class="exercise-answer">
+                <div class="tabs">
+                <button class="tab active" data-tab="html">HTML</button>
+                <button class="tab" data-tab="css">CSS</button>
+                <button class="tab" data-tab="js">JS</button>
+                </div>
+
+                <pre class="code-block active" data-content="html">
+                    &lt;button class="btn"&gt;Clique&lt;/button&gt;
+                </pre>
+
+                <pre class="code-block" data-content="css">
+                    .btn {
+                    padding: 10px 20px;
+                    background: cyan;
+                    border: none;
+                    }
+                    .btn:hover {
+                    background: white;
+                    }
+                </pre>
+
+                <pre class="code-block" data-content="js">
+                    /* Não necessário */
+                </pre>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- HTML + CSS + JS -->
+    <section class="content-section section-alt">
+        <div class="container">
+        <h3 class="section-title">⚙️ Exercícios de HTML + CSS + JavaScript</h3>
+
+        <div class="exercise-grid">
+            <div class="exercise-card">
+            <h4>Exercício 1</h4>
+            <p>Crie um botão que muda o texto ao clicar.</p>
+            <button class="btn-toggle">Mostrar Resposta</button>
+
+            <div class="exercise-answer">
+                <div class="tabs">
+                <button class="tab active" data-tab="html">HTML</button>
+                <button class="tab" data-tab="css">CSS</button>
+                <button class="tab" data-tab="js">JS</button>
+                </div>
+
+                <pre class="code-block active" data-content="html">
+                    &lt;button id="btn"&gt;Clique&lt;/button&gt;
+                </pre>
+
+                <pre class="code-block" data-content="css">
+                    button {
+                    padding: 10px;
+                    }
+                </pre>
+
+                <pre class="code-block" data-content="js">
+                    document.getElementById("btn")
+                    .addEventListener("click", function(){
+                        this.innerText = "Mudou!";
+                    });
+                </pre>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>Colinha Frontend — Material de apoio para estudantes de desenvolvimento web.</p>
+            <p class="footer-tip">💡 Dica: Pressione <kbd>F12</kbd> e explore o código desta página enquanto estuda!</p>
+        </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+   </body> 
+</html>
