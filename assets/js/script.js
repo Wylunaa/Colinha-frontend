@@ -154,3 +154,20 @@ document.querySelectorAll(".tabs").forEach(tabContainer => {
     });
   });
 });
+
+// Copiar codigo
+document.querySelectorAll(".copy-btn").forEach(btn => {
+
+btn.addEventListener("click", function(){
+
+const code = this.parentElement.querySelector(".code-block.active code").innerText;
+
+navigator.clipboard.writeText(code);
+
+this.innerText = "Copiado!";
+
+setTimeout(()=>{
+this.innerText = "Copiar";
+},1500);
+});
+});

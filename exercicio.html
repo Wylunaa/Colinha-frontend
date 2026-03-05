@@ -70,7 +70,7 @@
         <div class="exercise-grid">
 
             <!-- Exercício -->
-            <div class="exercise-card" id="resolver-exercicio">
+           <div class="exercise-card" id="resolver-exercicio">
             <h4>Exercício 1</h4>
             <p>Crie um título e um parágrafo usando tags semânticas.</p>
             <button class="btn-toggle">Mostrar Resposta</button>
@@ -81,52 +81,64 @@
                 <button class="tab" data-tab="css">CSS</button>
                 <button class="tab" data-tab="js">JS</button>
                 </div>
-
+            
+            <div class="code-container">
+                <button class="copy-btn tab">Copiar</button>
                 <pre class="code-block active" data-content="html">
-                    &lt;h1&gt;Meu Título&lt;/h1&gt;
-                    &lt;p&gt;Este é um parágrafo.&lt;/p&gt;
-                </pre>
+                &lt;h1&gt;Meu Título&lt;/h1&gt;
+                &lt;p&gt;Este é um parágrafo.&lt;/p&gt;</pre>
 
-                <pre class="code-block" data-content="css">
-                    /* Não necessário */
-                </pre>
+                <pre class="code-block" data-content="css"><code>
+                 /* Não necessário */
+                </code></pre>
 
-                <pre class="code-block" data-content="js">
-                    /* Não necessário */
-                </pre>
+                <pre class="code-block" data-content="js"><code>
+                /* Não necessário */
+                </code></pre>
+            </div>
+                
             </div>
             </div>
 
-              <div class="exercise-card" id="resolver-exercicio">
+            <div class="exercise-card" id="resolver-exercicio">
             <h4>Exercício 2</h4>
             <p>Crie uma lista de navegação usando &lt;nav&gt;, &lt;ul&gt; e &lt;li&gt; com 3 links.</p>
             <button class="btn-toggle">Mostrar Resposta</button>
 
             <div class="exercise-answer">
                 <div class="tabs">
-                <button class="tab active" data-tab="html">HTML</button>
-                <button class="tab" data-tab="css">CSS</button>
-                <button class="tab" data-tab="js">JS</button>
+                    <button class="tab active" data-tab="html">HTML</button>
+                    <button class="tab" data-tab="css">CSS</button>
+                    <button class="tab" data-tab="js">JS</button>
                 </div>
-
-                <pre class="code-block active" data-content="html">
+                <button class="copy-btn tab">Copiar</button>
+                
+                <div class="code-container">
+                    <pre class="code-block active" data-content="html">
                     &lt;nav&gt;
-                    Meu Título&lt;/h1&gt;
-                    &lt;/nav&gt;Este é um parágrafo.&lt;/p&gt;
-                </pre>
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Contato&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/nav&gt;
+                    </pre>
 
-                <pre class="code-block" data-content="css">
+                    <pre class="code-block" data-content="css"><code>
                     /* Não necessário */
-                </pre>
+                    </code></pre>
 
-                <pre class="code-block" data-content="js">
+                    <pre class="code-block" data-content="js"><code>
                     /* Não necessário */
-                </pre>
+                    </code></pre>
+
+                </div>
             </div>
-            </div>
+            
+        </div>
 
         </div>
-        </div>
+        
     </section>
 
     <!-- HTML + CSS -->
@@ -146,7 +158,40 @@
                 <button class="tab" data-tab="css">CSS</button>
                 <button class="tab" data-tab="js">JS</button>
                 </div>
+                <button class="copy-btn tab">Copiar</button>
+                <pre class="code-block active" data-content="html">
+                    &lt;button class="btn"&gt;Clique&lt;/button&gt;
+                </pre>
 
+                <pre class="code-block" data-content="css">
+                    .btn {
+                    padding: 10px 20px;
+                    background: cyan;
+                    border: none;
+                    }
+                    .btn:hover {
+                    background: white;
+                    }
+                </pre>
+
+                <pre class="code-block" data-content="js">
+                    /* Não necessário */
+                </pre>
+            </div>
+            </div>
+            <div class="exercise-grid">
+            <div class="exercise-card">
+            <h4>Exercício 1</h4>
+            <p>Crie um botão estilizado com hover.</p>
+            <button class="btn-toggle">Mostrar Resposta</button>
+
+            <div class="exercise-answer">
+                <div class="tabs">
+                <button class="tab active" data-tab="html">HTML</button>
+                <button class="tab" data-tab="css">CSS</button>
+                <button class="tab" data-tab="js">JS</button>
+                </div>
+                <button class="copy-btn tab">Copiar</button>
                 <pre class="code-block active" data-content="html">
                     &lt;button class="btn"&gt;Clique&lt;/button&gt;
                 </pre>
@@ -188,7 +233,38 @@
                 <button class="tab" data-tab="css">CSS</button>
                 <button class="tab" data-tab="js">JS</button>
                 </div>
+                <button class="copy-btn tab">Copiar</button>
+                <pre class="code-block active" data-content="html">
+                    &lt;button id="btn"&gt;Clique&lt;/button&gt;
+                </pre>
 
+                <pre class="code-block" data-content="css">
+                    button {
+                    padding: 10px;
+                    }
+                </pre>
+
+                <pre class="code-block" data-content="js">
+                    document.getElementById("btn")
+                    .addEventListener("click", function(){
+                        this.innerText = "Mudou!";
+                    });
+                </pre>
+            </div>
+            </div>
+            <div class="exercise-grid">
+            <div class="exercise-card">
+            <h4>Exercício 1</h4>
+            <p>Crie um botão que muda o texto ao clicar.</p>
+            <button class="btn-toggle">Mostrar Resposta</button>
+
+            <div class="exercise-answer">
+                <div class="tabs">
+                <button class="tab active" data-tab="html">HTML</button>
+                <button class="tab" data-tab="css">CSS</button>
+                <button class="tab" data-tab="js">JS</button>
+                </div>
+                <button class="copy-btn tab">Copiar</button>
                 <pre class="code-block active" data-content="html">
                     &lt;button id="btn"&gt;Clique&lt;/button&gt;
                 </pre>
@@ -209,7 +285,7 @@
             </div>
         </div>
         </div>
-    </section>
+    </section> 
 
     </main>
 
