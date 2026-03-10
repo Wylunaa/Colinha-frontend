@@ -125,6 +125,33 @@ function mostrarToast(tipo) {
     toast.classList.remove('visible');
   }, 3000);
 }
+// ============================================================
+// PÁGINA DE EXERCÍCIOS — Botão "Mostrar Resposta" + Progresso
+// ============================================================
+
+// Set guarda os IDs dos cards já abertos (sem repetir)
+var exerciciosAbertos = new Set();
+var TOTAL_EXERCICIOS  = document.querySelectorAll('.exercise-card').length;
+
+// Inicializa o total correto no contador
+(function () {
+  var count = document.getElementById('progressCount');
+  if (count) count.innerText = '0 / ' + TOTAL_EXERCICIOS;
+})();
+
+/**
+ * Atualiza a barra de progresso e o contador de texto
+ */
+function atualizarProgresso() {
+  var abertos = exerciciosAbertos.size;
+  var pct     = Math.round((abertos / TOTAL_EXERCICIOS) * 100);
+
+  var fill  = document.getElementById('progressFill');
+  var count = document.getElementById('progressCount');
+
+  if (fill)  fill.style.width  = pct + '%';
+  if (count) count.innerText   = abertos + ' / ' + TOTAL_EXERCICIOS;
+}
 
 // PAGINA DE EXERCICIO -- BOTÃO MOSTRAR RESPOSTA
 // Toggle resposta
@@ -157,17 +184,15 @@ document.querySelectorAll(".tabs").forEach(tabContainer => {
 
 // Copiar codigo
 document.querySelectorAll(".copy-btn").forEach(btn => {
+  btn.addEventListener("click", function(){
+  const code = this.parentElement.querySelector(".code-block.active").innerText;
 
-btn.addEventListener("click", function(){
+  navigator.clipboard.writeText(code);
 
-const code = this.parentElement.querySelector(".code-block.active code").innerText;
+  this.innerText = "Copiado!";
 
-navigator.clipboard.writeText(code);
-
-this.innerText = "Copiado!";
-
-setTimeout(()=>{
-this.innerText = "Copiar";
-},1500);
-});
+  setTimeout(()=>{
+  this.innerText = "Copiar";
+    },1500);
+  });
 });

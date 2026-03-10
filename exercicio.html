@@ -3,299 +3,651 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colinha Frontend — HTML, CSS e Componentes</title>
-
+    <title>Colinha Frontend — Exercícios</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <!-- ===========================
-         HEADER — Cabeçalho da página
-         Contém logo e nav principal
-    =========================== -->
+
     <header class="site-header">
       <div class="container header-inner">
         <div class="logo">
           <span class="logo-icon">📋</span>
           <span class="logo-text">Colinha <strong>Frontend</strong></span>
         </div>
-
-        <!-- NAV — Navegação principal -->
         <nav class="main-nav" aria-label="Navegação principal">
-          <a href="./index.html#html">HTML</a>
+          <a href="./index.html#html-estrutura">HTML</a>
           <a href="./index.html#html-semantico">Semântico</a>
           <a href="./index.html#html-conteudo">Conteúdo</a>
           <a href="./index.html#css-basico">CSS</a>
           <a href="./index.html#componentes">Componentes</a>
-          <a href="./exercicio.html#desafios" target="_blank ">Desafios</a>
+          <a href="./exercicio.html" target="_blank" rel="noopener noreferrer">Desafios</a>
         </nav>
       </div>
     </header>
-    <!-- ===========================
-         HERO — Primeira grande seção
-         Título impactante + subtítulo + CTA
-    =========================== -->
+
     <section class="hero" id="hero">
       <div class="container hero-inner">
         <p class="hero-eyebrow">📚 DESAFIO FRONTEND</p>
         <h1 class="hero-title">
-        Exercícios Práticos<br />
-          <span class="highlight">HTML &amp; CSS  E JAVASCRIPT</span>
+          Exercícios Práticos<br />
+          <span class="highlight">HTML, CSS &amp; JavaScript</span>
         </h1>
         <p class="hero-subtitle">
-          Pratique HTML, CSS e JavaScript resolvendo os desafios abaixo. 
+          Pratique resolvendo os desafios abaixo. Tente resolver sozinho antes de ver a resposta!
           Abra o <strong>F12</strong> e explore o código enquanto lê!
         </p>
-
-        <!-- CTA — Call to Action -->
-        <a href="#resolver-exercicio" class="btn btn-primary">Resolver os desafios</a>
+        <a href="#exercicios-html" class="btn btn-primary">Resolver os desafios</a>
         <a href="./index.html#componentes" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Ver componentes</a>
-      </div>  
-        <!-- Barra de progresso — atualizada pelo JS -->
-    <div class="progress-wrap">
+      </div>
+
+      <!-- Barra de progresso — atualizada pelo JS -->
+      <div class="progress-wrap">
         <span class="progress-label">Progresso</span>
         <div class="progress-bar-track">
-        <div class="progress-bar-fill" id="progressFill" style="width: 0%"></div>
-    </div>
-    <span class="progress-count" id="progressCount">0 / 13</span>
-  </div>
+          <div class="progress-bar-fill" id="progressFill" style="width: 0%"></div>
+        </div>
+        <span class="progress-count" id="progressCount">0 / 15</span>
+      </div>
     </section>
 
     <main>
-    <!-- TEMPLATE DE SEÇÃO -->
-    <!-- HTML -->
-    <section class="content-section section-alt" >
+
+      <!-- ==============================
+           SECAO 1 - HTML
+      ============================== -->
+      <section class="content-section section-alt" id="exercicios-html">
         <div class="container">
-        <h3 class="section-title"> 📁 Exercícios de HTML</h3>
+          <h3 class="section-title">🏗️ Exercícios de HTML</h3>
 
-        <div class="exercise-grid">
+          <div class="exercise-grid">
 
-            <!-- Exercício -->
-           <div class="exercise-card" id="resolver-exercicio">
-            <h4>Exercício 1</h4>
-            <p>Crie um título e um parágrafo usando tags semânticas.</p>
-            <button class="btn-toggle">Mostrar Resposta</button>
-
-            <div class="exercise-answer">
+            <!-- HTML 1 -->
+            <div class="exercise-card" id="exercicio-html-1">
+              <div class="exercise-header">
+                <span class="exercise-badge badge-html">HTML</span>
+                <span class="exercise-num">#01</span>
+              </div>
+              <h4>Estrutura básica</h4>
+              <p>Crie um título <code>&lt;h1&gt;</code> e um parágrafo <code>&lt;p&gt;</code> usando tags semânticas.</p>
+              <button class="btn-toggle">👁️ Mostrar Resposta</button>
+              <div class="exercise-answer">
                 <div class="tabs">
-                <button class="tab active" data-tab="html">HTML</button>
-                <button class="tab" data-tab="css">CSS</button>
-                <button class="tab" data-tab="js">JS</button>
-                </div>
-            
-            <div class="code-container">
-                <button class="copy-btn tab">Copiar</button>
-                <pre class="code-block active" data-content="html">
-                &lt;h1&gt;Meu Título&lt;/h1&gt;
-                &lt;p&gt;Este é um parágrafo.&lt;/p&gt;</pre>
-
-                <pre class="code-block" data-content="css"><code>
-                 /* Não necessário */
-                </code></pre>
-
-                <pre class="code-block" data-content="js"><code>
-                /* Não necessário */
-                </code></pre>
-            </div>
-                
-            </div>
-            </div>
-
-            <div class="exercise-card" id="resolver-exercicio">
-            <h4>Exercício 2</h4>
-            <p>Crie uma lista de navegação usando &lt;nav&gt;, &lt;ul&gt; e &lt;li&gt; com 3 links.</p>
-            <button class="btn-toggle">Mostrar Resposta</button>
-
-            <div class="exercise-answer">
-                <div class="tabs">
-                    <button class="tab active" data-tab="html">HTML</button>
-                    <button class="tab" data-tab="css">CSS</button>
-                    <button class="tab" data-tab="js">JS</button>
+                  <button class="tab active" data-tab="html">HTML</button>
+                  <button class="tab" data-tab="css">CSS</button>
+                  <button class="tab" data-tab="js">JS</button>
                 </div>
                 <button class="copy-btn tab">Copiar</button>
-                
-                <div class="code-container">
-                    <pre class="code-block active" data-content="html">
-                    &lt;nav&gt;
-                        &lt;ul&gt;
-                            &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href="#"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href="#"&gt;Contato&lt;/a&gt;&lt;/li&gt;
-                        &lt;/ul&gt;
-                    &lt;/nav&gt;
-                    </pre>
-
-                    <pre class="code-block" data-content="css"><code>
-                    /* Não necessário */
-                    </code></pre>
-
-                    <pre class="code-block" data-content="js"><code>
-                    /* Não necessário */
-                    </code></pre>
-
-                </div>
+                <pre class="code-block active" data-content="html">&lt;h1&gt;Meu Título&lt;/h1&gt;
+&lt;p&gt;Este é um parágrafo de texto.&lt;/p&gt;</pre>
+                <pre class="code-block" data-content="css">/* Não necessário */</pre>
+                <pre class="code-block" data-content="js">/* Não necessário */</pre>
+              </div>
             </div>
-            
-        </div>
 
-        </div>
-        
-    </section>
+            <!-- HTML 2 -->
+            <div class="exercise-card" id="exercicio-html-2">
+              <div class="exercise-header">
+                <span class="exercise-badge badge-html">HTML</span>
+                <span class="exercise-num">#02</span>
+              </div>
+              <h4>Lista de navegação</h4>
+              <p>Crie uma lista de navegação usando <code>&lt;nav&gt;</code>, <code>&lt;ul&gt;</code> e <code>&lt;li&gt;</code> com 3 links.</p>
+              <button class="btn-toggle">👁️ Mostrar Resposta</button>
+              <div class="exercise-answer">
+                <div class="tabs">
+                  <button class="tab active" data-tab="html">HTML</button>
+                  <button class="tab" data-tab="css">CSS</button>
+                  <button class="tab" data-tab="js">JS</button>
+                </div>
+                <button class="copy-btn tab">Copiar</button>
+                <pre class="code-block active" data-content="html">&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Início&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Contato&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+                <pre class="code-block" data-content="css">/* Não necessário */</pre>
+                <pre class="code-block" data-content="js">/* Não necessário */</pre>
+              </div>
+            </div>
 
-    <!-- HTML + CSS -->
-    <section class="content-section">
+            <!-- HTML 3 -->
+            <div class="exercise-card" id="exercicio-html-3">
+              <div class="exercise-header">
+                <span class="exercise-badge badge-html">HTML</span>
+                <span class="exercise-num">#03</span>
+              </div>
+              <h4>Formulário simples</h4>
+              <p>Monte um formulário com campo de nome, campo de email e botão de envio. Use <code>&lt;label&gt;</code> ligado ao input pelo atributo <code>for</code>.</p>
+              <button class="btn-toggle">👁️ Mostrar Resposta</button>
+              <div class="exercise-answer">
+                <div class="tabs">
+                  <button class="tab active" data-tab="html">HTML</button>
+                  <button class="tab" data-tab="css">CSS</button>
+                  <button class="tab" data-tab="js">JS</button>
+                </div>
+                <button class="copy-btn tab">Copiar</button>
+                <pre class="code-block active" data-content="html">&lt;form&gt;
+  &lt;label for="nome"&gt;Nome:&lt;/label&gt;
+  &lt;input type="text" id="nome" name="nome" /&gt;
+
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" /&gt;
+
+  &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</pre>
+                <pre class="code-block" data-content="css">/* Não necessário */</pre>
+                <pre class="code-block" data-content="js">/* Não necessário */</pre>
+              </div>
+            </div>
+
+            <!-- HTML 4 -->
+            <div class="exercise-card" id="exercicio-html-4">
+              <div class="exercise-header">
+                <span class="exercise-badge badge-html">HTML</span>
+                <span class="exercise-num">#04</span>
+              </div>
+              <h4>Tabela de dados</h4>
+              <p>Crie uma tabela mostrando nome e idade de 3 pessoas. Use <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;th&gt;</code> e <code>&lt;td&gt;</code>.</p>
+              <button class="btn-toggle">👁️ Mostrar Resposta</button>
+              <div class="exercise-answer">
+                <div class="tabs">
+                  <button class="tab active" data-tab="html">HTML</button>
+                  <button class="tab" data-tab="css">CSS</button>
+                  <button class="tab" data-tab="js">JS</button>
+                </div>
+                <button class="copy-btn tab">Copiar</button>
+                <pre class="code-block active" data-content="html">&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Nome&lt;/th&gt;
+      &lt;th&gt;Idade&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;Ana&lt;/td&gt;&lt;td&gt;28&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Bruno&lt;/td&gt;&lt;td&gt;34&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Carla&lt;/td&gt;&lt;td&gt;22&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+                <pre class="code-block" data-content="css">/* Não necessário */</pre>
+                <pre class="code-block" data-content="js">/* Não necessário */</pre>
+              </div>
+            </div>
+
+            <!-- HTML 5 -->
+            <div class="exercise-card" id="exercicio-html-5">
+              <div class="exercise-header">
+                <span class="exercise-badge badge-html">HTML</span>
+                <span class="exercise-num">#05</span>
+              </div>
+              <h4>Imagem com legenda</h4>
+              <p>Insira uma imagem usando <code>&lt;figure&gt;</code> e <code>&lt;figcaption&gt;</code>. Não esqueça do atributo <code>alt</code> para acessibilidade.</p>
+              <button class="btn-toggle">👁️ Mostrar Resposta</button>
+              <div class="exercise-answer">
+                <div class="tabs">
+                  <button class="tab active" data-tab="html">HTML</button>
+                  <button class="tab" data-tab="css">CSS</button>
+                  <button class="tab" data-tab="js">JS</button>
+                </div>
+                <button class="copy-btn tab">Copiar</button>
+                <pre class="code-block active" data-content="html">&lt;figure&gt;
+  &lt;img
+    src="./assets/imagem/foto.jpg"
+    alt="Descrição da imagem para acessibilidade"
+    width="400"
+  /&gt;
+  &lt;figcaption&gt;Legenda explicando a imagem.&lt;/figcaption&gt;
+&lt;/figure&gt;</pre>
+                <pre class="code-block" data-content="css">/* Não necessário */</pre>
+                <pre class="code-block" data-content="js">/* Não necessário */</pre>
+              </div>
+            </div>
+
+          </div><!-- /exercise-grid -->
+        </div>
+      </section>
+
+      <!-- ==============================
+           SECAO 2 - HTML + CSS
+      ============================== -->
+      <section class="content-section" id="exercicios-css">
         <div class="container">
-        <h3 class="section-title">🧢 Exercícios de HTML + CSS</h3>
+          <h3 class="section-title">🎨 Exercícios de HTML + CSS</h3>
 
-        <div class="exercise-grid">
-            <div class="exercise-card">
-            <h4>Exercício 1</h4>
-            <p>Crie um botão estilizado com hover.</p>
-            <button class="btn-toggle">Mostrar Resposta</button>
+          <div class="exercise-grid">
 
-            <div class="exercise-answer">
+            <!-- CSS 1 -->
+            <div class="exercise-card" id="exercicio-css-1">
+              <div class="exercise-header">
+                <span class="exercise-badge badge-css">CSS</span>
+                <span class="exercise-num">#06</span>
+              </div>
+              <h4>Botão estilizado com hover</h4>
+              <p>Crie um botão com cor de fundo, borda arredondada e efeito visual ao passar o mouse usando <code>:hover</code> e <code>transition</code>.</p>
+              <button class="btn-toggle">👁️ Mostrar Resposta</button>
+              <div class="exercise-answer">
                 <div class="tabs">
-                <button class="tab active" data-tab="html">HTML</button>
-                <button class="tab" data-tab="css">CSS</button>
-                <button class="tab" data-tab="js">JS</button>
+                  <button class="tab active" data-tab="html">HTML</button>
+                  <button class="tab" data-tab="css">CSS</button>
+                  <button class="tab" data-tab="js">JS</button>
                 </div>
                 <button class="copy-btn tab">Copiar</button>
-                <pre class="code-block active" data-content="html">
-                    &lt;button class="btn"&gt;Clique&lt;/button&gt;
-                </pre>
+                <pre class="code-block active" data-content="html">&lt;button class="meu-botao"&gt;Clique aqui&lt;/button&gt;</pre>
+                <pre class="code-block" data-content="css">.meu-botao {
+  padding: 10px 24px;
+  background: #8b5cf6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s, transform 0.15s;
+}
 
-                <pre class="code-block" data-content="css">
-                    .btn {
-                    padding: 10px 20px;
-                    background: cyan;
-                    border: none;
-                    }
-                    .btn:hover {
-                    background: white;
-                    }
-                </pre>
-
-                <pre class="code-block" data-content="js">
-                    /* Não necessário */
-                </pre>
+.meu-botao:hover {
+  background: #7c3aed;
+  transform: translateY(-2px);
+}</pre>
+                <pre class="code-block" data-content="js">/* Não necessário */</pre>
+              </div>
             </div>
-            </div>
-            <div class="exercise-grid">
-            <div class="exercise-card">
-            <h4>Exercício 1</h4>
-            <p>Crie um botão estilizado com hover.</p>
-            <button class="btn-toggle">Mostrar Resposta</button>
 
-            <div class="exercise-answer">
+            <!-- CSS 2 -->
+            <div class="exercise-card" id="exercicio-css-2">
+              <div class="exercise-header">
+                <span class="exercise-badge badge-css">CSS</span>
+                <span class="exercise-num">#07</span>
+              </div>
+              <h4>Card com sombra</h4>
+              <p>Construa um card com título, texto e borda arredondada. Use <code>box-shadow</code> para dar profundidade e um efeito de elevação no <code>:hover</code>.</p>
+              <button class="btn-toggle">👁️ Mostrar Resposta</button>
+              <div class="exercise-answer">
                 <div class="tabs">
-                <button class="tab active" data-tab="html">HTML</button>
-                <button class="tab" data-tab="css">CSS</button>
-                <button class="tab" data-tab="js">JS</button>
+                  <button class="tab active" data-tab="html">HTML</button>
+                  <button class="tab" data-tab="css">CSS</button>
+                  <button class="tab" data-tab="js">JS</button>
                 </div>
                 <button class="copy-btn tab">Copiar</button>
-                <pre class="code-block active" data-content="html">
-                    &lt;button class="btn"&gt;Clique&lt;/button&gt;
-                </pre>
+                <pre class="code-block active" data-content="html">&lt;div class="meu-card"&gt;
+  &lt;h3&gt;Título do Card&lt;/h3&gt;
+  &lt;p&gt;Texto descritivo do card.&lt;/p&gt;
+&lt;/div&gt;</pre>
+                <pre class="code-block" data-content="css">.meu-card {
+  background: #1e1e28;
+  border: 1px solid #2e2e3e;
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 320px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
 
-                <pre class="code-block" data-content="css">
-                    .btn {
-                    padding: 10px 20px;
-                    background: cyan;
-                    border: none;
-                    }
-                    .btn:hover {
-                    background: white;
-                    }
-                </pre>
+.meu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
 
-                <pre class="code-block" data-content="js">
-                    /* Não necessário */
-                </pre>
+.meu-card h3 { margin-bottom: 0.5rem; color: #e4e4f0; }
+.meu-card p  { color: #7a7a9a; font-size: 0.9rem; }</pre>
+                <pre class="code-block" data-content="js">/* Não necessário */</pre>
+              </div>
             </div>
-            </div>
-        </div>
-        </div>
-    </section>
 
-    <!-- HTML + CSS + JS -->
-    <section class="content-section section-alt">
+            <!-- CSS 3 -->
+            <div class="exercise-card" id="exercicio-css-3">
+              <div class="exercise-header">
+                <span class="exercise-badge badge-css">CSS</span>
+                <span class="exercise-num">#08</span>
+              </div>
+              <h4>Layout com Flexbox</h4>
+              <p>Alinhe 3 itens lado a lado com espaço igual entre eles usando <code>display: flex</code>, <code>justify-content: space-between</code> e <code>flex: 1</code>.</p>
+              <button class="btn-toggle">👁️ Mostrar Resposta</button>
+              <div class="exercise-answer">
+                <div class="tabs">
+                  <button class="tab active" data-tab="html">HTML</button>
+                  <button class="tab" data-tab="css">CSS</button>
+                  <button class="tab" data-tab="js">JS</button>
+                </div>
+                <button class="copy-btn tab">Copiar</button>
+                <pre class="code-block active" data-content="html">&lt;div class="flex-container"&gt;
+  &lt;div class="flex-item"&gt;Item 1&lt;/div&gt;
+  &lt;div class="flex-item"&gt;Item 2&lt;/div&gt;
+  &lt;div class="flex-item"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;</pre>
+                <pre class="code-block" data-content="css">.flex-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.flex-item {
+  flex: 1;           /* cada item ocupa largura igual */
+  background: #1e1e28;
+  border: 1px solid #2e2e3e;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  color: #22d3ee;
+}</pre>
+                <pre class="code-block" data-content="js">/* Não necessário */</pre>
+              </div>
+            </div>
+
+            <!-- CSS 4 -->
+            <div class="exercise-card" id="exercicio-css-4">
+              <div class="exercise-header">
+                <span class="exercise-badge badge-css">CSS</span>
+                <span class="exercise-num">#09</span>
+              </div>
+              <h4>Grid de 3 colunas</h4>
+              <p>Crie uma galeria com 6 itens usando <code>display: grid</code> com <code>repeat(3, 1fr)</code> para 3 colunas de largura igual.</p>
+              <button class="btn-toggle">👁️ Mostrar Resposta</button>
+              <div class="exercise-answer">
+                <div class="tabs">
+                  <button class="tab active" data-tab="html">HTML</button>
+                  <button class="tab" data-tab="css">CSS</button>
+                  <button class="tab" data-tab="js">JS</button>
+                </div>
+                <button class="copy-btn tab">Copiar</button>
+                <pre class="code-block active" data-content="html">&lt;div class="galeria"&gt;
+  &lt;div class="galeria-item"&gt;1&lt;/div&gt;
+  &lt;div class="galeria-item"&gt;2&lt;/div&gt;
+  &lt;div class="galeria-item"&gt;3&lt;/div&gt;
+  &lt;div class="galeria-item"&gt;4&lt;/div&gt;
+  &lt;div class="galeria-item"&gt;5&lt;/div&gt;
+  &lt;div class="galeria-item"&gt;6&lt;/div&gt;
+&lt;/div&gt;</pre>
+                <pre class="code-block" data-content="css">.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.galeria-item {
+  background: #1e1e28;
+  border: 1px solid #2e2e3e;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  color: #f472b6;
+  font-weight: 700;
+  font-size: 1.2rem;
+}</pre>
+                <pre class="code-block" data-content="js">/* Não necessário */</pre>
+              </div>
+            </div>
+
+            <!-- CSS 5 -->
+            <div class="exercise-card" id="exercicio-css-5">
+              <div class="exercise-header">
+                <span class="exercise-badge badge-css">CSS</span>
+                <span class="exercise-num">#10</span>
+              </div>
+              <h4>Variáveis CSS</h4>
+              <p>Declare variáveis CSS no <code>:root</code> para cor primária e secundária. Use-as em dois elementos diferentes da página.</p>
+              <button class="btn-toggle">👁️ Mostrar Resposta</button>
+              <div class="exercise-answer">
+                <div class="tabs">
+                  <button class="tab active" data-tab="html">HTML</button>
+                  <button class="tab" data-tab="css">CSS</button>
+                  <button class="tab" data-tab="js">JS</button>
+                </div>
+                <button class="copy-btn tab">Copiar</button>
+                <pre class="code-block active" data-content="html">&lt;button class="btn-var"&gt;Primário&lt;/button&gt;
+&lt;p class="texto-var"&gt;Texto com cor secundária&lt;/p&gt;</pre>
+                <pre class="code-block" data-content="css">/* Declara as variáveis globais no :root */
+:root {
+  --cor-primaria:   #8b5cf6;
+  --cor-secundaria: #22d3ee;
+}
+
+/* Usa as variáveis com var() */
+.btn-var {
+  background: var(--cor-primaria);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.texto-var {
+  color: var(--cor-secundaria);
+  font-weight: 600;
+  margin-top: 1rem;
+}</pre>
+                <pre class="code-block" data-content="js">/* Não necessário */</pre>
+              </div>
+            </div>
+
+          </div><!-- /exercise-grid -->
+        </div>
+      </section>
+
+      <!-- ==============================
+           SECAO 3 - HTML + CSS + JS
+      ============================== -->
+      <section class="content-section section-alt" id="exercicios-js">
         <div class="container">
-        <h3 class="section-title">⚙️ Exercícios de HTML + CSS + JavaScript</h3>
+          <h3 class="section-title">⚙️ Exercícios de HTML + CSS + JavaScript</h3>
 
-        <div class="exercise-grid">
-            <div class="exercise-card">
-            <h4>Exercício 1</h4>
-            <p>Crie um botão que muda o texto ao clicar.</p>
-            <button class="btn-toggle">Mostrar Resposta</button>
+          <div class="exercise-grid">
 
-            <div class="exercise-answer">
+            <!-- JS 1 -->
+            <div class="exercise-card" id="exercicio-js-1">
+              <div class="exercise-header">
+                <span class="exercise-badge badge-js">JS</span>
+                <span class="exercise-num">#11</span>
+              </div>
+              <h4>Botão que muda texto</h4>
+              <p>Crie um botão que ao ser clicado altera o próprio texto de "Clique aqui" para "Clicado! ✅".</p>
+              <button class="btn-toggle">👁️ Mostrar Resposta</button>
+              <div class="exercise-answer">
                 <div class="tabs">
-                <button class="tab active" data-tab="html">HTML</button>
-                <button class="tab" data-tab="css">CSS</button>
-                <button class="tab" data-tab="js">JS</button>
+                  <button class="tab active" data-tab="html">HTML</button>
+                  <button class="tab" data-tab="css">CSS</button>
+                  <button class="tab" data-tab="js">JS</button>
                 </div>
                 <button class="copy-btn tab">Copiar</button>
-                <pre class="code-block active" data-content="html">
-                    &lt;button id="btn"&gt;Clique&lt;/button&gt;
-                </pre>
-
-                <pre class="code-block" data-content="css">
-                    button {
-                    padding: 10px;
-                    }
-                </pre>
-
-                <pre class="code-block" data-content="js">
-                    document.getElementById("btn")
-                    .addEventListener("click", function(){
-                        this.innerText = "Mudou!";
-                    });
-                </pre>
+                <pre class="code-block active" data-content="html">&lt;button id="meuBtn"&gt;Clique aqui&lt;/button&gt;</pre>
+                <pre class="code-block" data-content="css">button { padding: 10px 20px; cursor: pointer; }</pre>
+                <pre class="code-block" data-content="js">document.getElementById("meuBtn")
+  .addEventListener("click", function () {
+    this.innerText = "Clicado! ✅";
+  });</pre>
+              </div>
             </div>
-            </div>
-            <div class="exercise-grid">
-            <div class="exercise-card">
-            <h4>Exercício 1</h4>
-            <p>Crie um botão que muda o texto ao clicar.</p>
-            <button class="btn-toggle">Mostrar Resposta</button>
 
-            <div class="exercise-answer">
+            <!-- JS 2 -->
+            <div class="exercise-card" id="exercicio-js-2">
+              <div class="exercise-header">
+                <span class="exercise-badge badge-js">JS</span>
+                <span class="exercise-num">#12</span>
+              </div>
+              <h4>Contador de cliques</h4>
+              <p>Exiba um número na tela que aumenta +1 a cada clique. Use uma variável para guardar o valor atual.</p>
+              <button class="btn-toggle">👁️ Mostrar Resposta</button>
+              <div class="exercise-answer">
                 <div class="tabs">
-                <button class="tab active" data-tab="html">HTML</button>
-                <button class="tab" data-tab="css">CSS</button>
-                <button class="tab" data-tab="js">JS</button>
+                  <button class="tab active" data-tab="html">HTML</button>
+                  <button class="tab" data-tab="css">CSS</button>
+                  <button class="tab" data-tab="js">JS</button>
                 </div>
                 <button class="copy-btn tab">Copiar</button>
-                <pre class="code-block active" data-content="html">
-                    &lt;button id="btn"&gt;Clique&lt;/button&gt;
-                </pre>
+                <pre class="code-block active" data-content="html">&lt;p&gt;Cliques: &lt;span id="contagem"&gt;0&lt;/span&gt;&lt;/p&gt;
+&lt;button id="btnContar"&gt;Clique para contar&lt;/button&gt;</pre>
+                <pre class="code-block" data-content="css">button { padding: 10px 20px; cursor: pointer; }
+span   { font-weight: bold; font-size: 1.2rem; }</pre>
+                <pre class="code-block" data-content="js">var contador = 0; // variável que guarda o valor
 
-                <pre class="code-block" data-content="css">
-                    button {
-                    padding: 10px;
-                    }
-                </pre>
+document.getElementById("btnContar")
+  .addEventListener("click", function () {
+    contador++;  // incrementa +1
+    document.getElementById("contagem").innerText = contador;
+  });</pre>
+              </div>
+            </div>
 
-                <pre class="code-block" data-content="js">
-                    document.getElementById("btn")
-                    .addEventListener("click", function(){
-                        this.innerText = "Mudou!";
-                    });
-                </pre>
+            <!-- JS 3 -->
+            <div class="exercise-card" id="exercicio-js-3">
+              <div class="exercise-header">
+                <span class="exercise-badge badge-js">JS</span>
+                <span class="exercise-num">#13</span>
+              </div>
+              <h4>Mostrar / ocultar elemento</h4>
+              <p>Crie um parágrafo que começa oculto e um botão que alterna entre mostrar e esconder usando <code>classList.toggle</code>.</p>
+              <button class="btn-toggle">👁️ Mostrar Resposta</button>
+              <div class="exercise-answer">
+                <div class="tabs">
+                  <button class="tab active" data-tab="html">HTML</button>
+                  <button class="tab" data-tab="css">CSS</button>
+                  <button class="tab" data-tab="js">JS</button>
+                </div>
+                <button class="copy-btn tab">Copiar</button>
+                <pre class="code-block active" data-content="html">&lt;button id="btnToggle"&gt;Mostrar texto&lt;/button&gt;
+&lt;p id="textoOculto" class="oculto"&gt;
+  Olá! Agora você me vê! 👋
+&lt;/p&gt;</pre>
+                <pre class="code-block" data-content="css">/* Classe que esconde o elemento */
+.oculto { display: none; }
+
+button { padding: 10px 20px; cursor: pointer; }</pre>
+                <pre class="code-block" data-content="js">var btn   = document.getElementById("btnToggle");
+var texto = document.getElementById("textoOculto");
+
+btn.addEventListener("click", function () {
+  texto.classList.toggle("oculto"); // alterna a classe
+
+  // Muda o texto do botão conforme o estado
+  if (texto.classList.contains("oculto")) {
+    btn.innerText = "Mostrar texto";
+  } else {
+    btn.innerText = "Esconder texto";
+  }
+});</pre>
+              </div>
             </div>
+
+            <!-- JS 4 -->
+            <div class="exercise-card" id="exercicio-js-4">
+              <div class="exercise-header">
+                <span class="exercise-badge badge-js">JS</span>
+                <span class="exercise-num">#14</span>
+              </div>
+              <h4>Validação de campo</h4>
+              <p>Crie um input e um botão. Ao clicar, verifique se o campo está vazio e exiba uma mensagem de erro ou sucesso com <code>if / else</code>.</p>
+              <button class="btn-toggle">👁️ Mostrar Resposta</button>
+              <div class="exercise-answer">
+                <div class="tabs">
+                  <button class="tab active" data-tab="html">HTML</button>
+                  <button class="tab" data-tab="css">CSS</button>
+                  <button class="tab" data-tab="js">JS</button>
+                </div>
+                <button class="copy-btn tab">Copiar</button>
+                <pre class="code-block active" data-content="html">&lt;input type="text" id="campoNome" placeholder="Digite seu nome" /&gt;
+&lt;button id="btnValidar"&gt;Enviar&lt;/button&gt;
+&lt;p id="mensagem"&gt;&lt;/p&gt;</pre>
+                <pre class="code-block" data-content="css">input {
+  padding: 8px 12px;
+  border: 2px solid #2e2e3e;
+  border-radius: 6px;
+  background: #1e1e28;
+  color: #e4e4f0;
+}
+
+input.erro    { border-color: #ef4444; }
+input.ok      { border-color: #10b981; }
+.msg-erro     { color: #ef4444; font-size: 0.85rem; }
+.msg-sucesso  { color: #10b981; font-size: 0.85rem; }
+
+button { padding: 8px 16px; margin-left: 8px; cursor: pointer; }</pre>
+                <pre class="code-block" data-content="js">document.getElementById("btnValidar")
+  .addEventListener("click", function () {
+    var campo    = document.getElementById("campoNome");
+    var mensagem = document.getElementById("mensagem");
+    var valor    = campo.value.trim(); // remove espaços
+
+    if (valor === "") {
+      campo.className    = "erro";
+      mensagem.className = "msg-erro";
+      mensagem.innerText = "⚠️ O campo não pode estar vazio!";
+    } else {
+      campo.className    = "ok";
+      mensagem.className = "msg-sucesso";
+      mensagem.innerText = "✅ Olá, " + valor + "!";
+    }
+  });</pre>
+              </div>
             </div>
+
+            <!-- JS 5 -->
+            <div class="exercise-card" id="exercicio-js-5">
+              <div class="exercise-header">
+                <span class="exercise-badge badge-js">JS</span>
+                <span class="exercise-num">#15</span>
+              </div>
+              <h4>Mudar cor de fundo</h4>
+              <p>Crie 3 botões coloridos. Ao clicar em cada um, o fundo de uma div muda para a cor correspondente usando <code>dataset</code> e <code>forEach</code>.</p>
+              <button class="btn-toggle">👁️ Mostrar Resposta</button>
+              <div class="exercise-answer">
+                <div class="tabs">
+                  <button class="tab active" data-tab="html">HTML</button>
+                  <button class="tab" data-tab="css">CSS</button>
+                  <button class="tab" data-tab="js">JS</button>
+                </div>
+                <button class="copy-btn tab">Copiar</button>
+                <pre class="code-block active" data-content="html">&lt;div id="painel" class="painel-cor"&gt;
+  &lt;button data-cor="#8b5cf6"&gt;Roxo&lt;/button&gt;
+  &lt;button data-cor="#22d3ee"&gt;Ciano&lt;/button&gt;
+  &lt;button data-cor="#10b981"&gt;Verde&lt;/button&gt;
+&lt;/div&gt;</pre>
+                <pre class="code-block" data-content="css">.painel-cor {
+  padding: 2rem;
+  border-radius: 12px;
+  background: #1e1e28;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  transition: background 0.4s; /* animação suave */
+}
+
+.painel-cor button {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}</pre>
+                <pre class="code-block" data-content="js">var painel = document.getElementById("painel");
+var botoes = painel.querySelectorAll("button");
+
+// Percorre todos os botões com forEach
+botoes.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    var cor = this.dataset.cor; // lê o atributo data-cor
+    painel.style.background = cor;
+  });
+});</pre>
+              </div>
+            </div>
+
+          </div><!-- /exercise-grid -->
         </div>
-        </div>
-    </section> 
+      </section>
 
     </main>
 
     <footer class="site-footer">
-        <div class="container footer-inner">
-            <p>Colinha Frontend — Material de apoio para estudantes de desenvolvimento web.</p>
-            <p class="footer-tip">💡 Dica: Pressione <kbd>F12</kbd> e explore o código desta página enquanto estuda!</p>
-        </div>
+      <div class="container footer-inner">
+        <p>Colinha Frontend — Material de apoio para estudantes de desenvolvimento web.</p>
+        <p class="footer-tip">💡 Dica: Pressione <kbd>F12</kbd> e explore o código desta página enquanto estuda!</p>
+      </div>
     </footer>
 
     <script src="./assets/js/script.js"></script>
-   </body> 
+</body>
 </html>

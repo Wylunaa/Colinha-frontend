@@ -1519,64 +1519,263 @@ details[open] .accordion-trigger::before {
   .ex-carousel-next { right: 4px; }
 }
 
-/* ---- PAGINA DE EXERCICIO ---- */
+/* ============================================================
+   EXERCÍCIOS — Novos estilos (badges, header do card, progresso)
+   ============================================================ */
+
+/* Grid de exercícios: 1 coluna por padrão, 2 em telas médias */
 .exercise-grid {
   display: grid;
   gap: 1.5rem;
+  grid-template-columns: 1fr;
 }
 
+@media (min-width: 768px) {
+  .exercise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Card do exercício */
 .exercise-card {
   background: var(--color-card);
   padding: 1.5rem;
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
+.exercise-card:hover {
+  border-color: var(--accent-purple);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Linha de topo do card: badge + número */
+.exercise-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+/* Badge colorido por categoria */
+.exercise-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.badge-html {
+  background: rgba(255, 107, 53, 0.15);
+  color: var(--accent-orange);
+  border: 1px solid rgba(255, 107, 53, 0.3);
+}
+
+.badge-css {
+  background: rgba(139, 92, 246, 0.15);
+  color: var(--accent-purple);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.badge-js {
+  background: rgba(251, 191, 36, 0.15);
+  color: var(--accent-yellow);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+/* Número do exercício */
+.exercise-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-muted);
+  font-family: var(--font-mono);
+}
+
+/* Título do exercício */
+.exercise-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.4rem;
+}
+
+/* Texto do exercício */
+.exercise-card > p {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+/* Botão mostrar/ocultar resposta */
 .btn-toggle {
   margin-top: 1rem;
-  padding: 8px 14px;
-  background: var(--accent-cyan);
-  border: none;
+  padding: 7px 16px;
+  background: transparent;
+  color: var(--accent-cyan);
+  border: 1px solid var(--accent-cyan);
+  border-radius: var(--radius-sm);
   cursor: pointer;
-  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: inherit;
+  transition: background 0.15s, color 0.15s;
 }
 
+.btn-toggle:hover {
+  background: rgba(34, 211, 238, 0.1);
+}
+
+/* Área de resposta — oculta por padrão */
 .exercise-answer {
   display: none;
   margin-top: 1rem;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
 }
 
 .exercise-answer.active {
   display: block;
 }
 
-.tabs-exercicio {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.tab-exercicio {
+/* Abas HTML / CSS / JS dentro do exercício */
+.exercise-answer .tabs {
   background: transparent;
-  color: #6b50a7;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.exercise-answer .tabs .tab {
+  background: transparent;
+  color: var(--color-muted);
   border: 1px solid var(--color-border);
-  padding: 5px 10px;
+  padding: 4px 14px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  margin-right: 6px;
+  margin-bottom: 10px;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
 
-.tab.active {
+.exercise-answer .tabs .tab:hover {
+  border-color: var(--accent-purple);
+  color: var(--color-text);
+}
+
+.exercise-answer .tabs .tab.active {
   background: var(--accent-cyan);
+  color: #0f0f13;
+  border-color: var(--accent-cyan);
 }
 
+/* Bloco de código */
 .code-block {
   display: none;
-  background: #3f3d3d;
-  padding: 1rem;
-  border-radius: 6px;
-  font-size: 0.85rem;
+  background: #12121a;
+  border: 1px solid var(--color-border);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-size: 0.82rem;
+  font-family: var(--font-mono);
+  line-height: 1.7;
+  color: #c4b5fd;
   overflow-x: auto;
+  white-space: pre;
 }
 
 .code-block.active {
   display: block;
+}
+
+/* Barra de progresso */
+.progress-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.progress-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.progress-bar-track {
+  width: 220px;
+  height: 8px;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+  border-radius: 999px;
+  transition: width 0.5s ease;
+}
+
+.progress-count {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  font-family: var(--font-mono);
+}
+/* ---- BOTÃO COPIAR ---- */
+
+/* Linha que agrupa as abas + botão copiar lado a lado */
+.tabs-copy-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* As abas dentro do novo wrapper não precisam de margin-bottom própria */
+.tabs-copy-row .tabs {
+  margin-bottom: 0;
+  flex: 1;
+}
+
+/* Botão copiar */
+.copy-btn {
+  padding: 4px 14px;
+  background: transparent;
+  color: var(--color-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  flex-shrink: 0;
+}
+
+.copy-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--color-text);
+  border-color: var(--accent-cyan);
+}
+
+/* Estado "Copiado!" */
+.copy-btn.copied {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--accent-green);
+  border-color: var(--accent-green);
 }
