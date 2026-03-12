@@ -199,17 +199,32 @@ document.querySelectorAll('.exercise-card .tabs').forEach(function (tabContainer
     });
   });
 });
-// Copiar codigo
-document.querySelectorAll(".copy-btn").forEach(btn => {
-  btn.addEventListener("click", function(){
-  const code = this.parentElement.querySelector(".code-block.active").innerText;
 
-  navigator.clipboard.writeText(code);
-
-  this.innerText = "Copiado!";
-
-  setTimeout(()=>{
-  this.innerText = "Copiar";
-    },1500);
+// --- 4. BOTÃO COPIAR ---
+document.querySelectorAll('.copy-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+ 
+    // Sobe até .exercise-answer para pegar o bloco ativo correto
+    var answer = btn.closest('.exercise-answer');
+    if (!answer) return;
+ 
+    var bloco = answer.querySelector('.code-block.active');
+    if (!bloco) return;
+ 
+    navigator.clipboard.writeText(bloco.innerText)
+      .then(function() {
+        btn.innerText = '✅ Copiado!';
+        btn.classList.add('copied');
+ 
+        setTimeout(function() {
+          btn.innerText = '📋 Copiar';
+          btn.classList.remove('copied');
+        }, 1500);
+      })
+      .catch(function() {
+        // Fallback para navegadores sem suporte à Clipboard API
+        btn.innerText = '⚠️ Erro ao copiar';
+        setTimeout(function() { btn.innerText = '📋 Copiar'; }, 1500);
+      });
   });
 });
