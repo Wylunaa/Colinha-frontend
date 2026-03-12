@@ -125,8 +125,9 @@ function mostrarToast(tipo) {
     toast.classList.remove('visible');
   }, 3000);
 }
+
 // ============================================================
-// PÁGINA DE EXERCÍCIOS — Botão "Mostrar Resposta" + Progresso
+// PÁGINA DE EXERCÍCIOS — Toggle, Abas, Progresso e Copiar
 // ============================================================
 
 // Set guarda os IDs dos cards já abertos (sem repetir)
@@ -153,35 +154,51 @@ function atualizarProgresso() {
   if (count) count.innerText   = abertos + ' / ' + TOTAL_EXERCICIOS;
 }
 
-// PAGINA DE EXERCICIO -- BOTÃO MOSTRAR RESPOSTA
-// Toggle resposta
-document.querySelectorAll(".btn-toggle").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const answer = btn.nextElementSibling;
-    answer.classList.toggle("active");
+/**
+ * Botão "Mostrar / Ocultar Resposta"
+ * Usa closest() para achar o card pai — mais seguro que nextElementSibling
+ */
+document.querySelectorAll('.btn-toggle').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var card   = btn.closest('.exercise-card');
+    var answer = card.querySelector('.exercise-answer');
+
+    answer.classList.toggle('active');
+
+    if (answer.classList.contains('active')) {
+      btn.innerText = '🙈 Ocultar Resposta';
+
+      // Registra o exercício pelo id do card (Set ignora duplicatas)
+      if (card && card.id) {
+        exerciciosAbertos.add(card.id);
+        atualizarProgresso();
+      }
+    } else {
+      btn.innerText = '👁️ Mostrar Resposta';
+    }
   });
 });
 
-// Tabs
-document.querySelectorAll(".tabs").forEach(tabContainer => {
-  const tabs = tabContainer.querySelectorAll(".tab");
-  const blocks = tabContainer.parentElement.querySelectorAll(".code-block");
+/**
+ * Abas HTML / CSS / JS — cada card tem suas próprias abas isoladas
+ */
+document.querySelectorAll('.exercise-card .tabs').forEach(function (tabContainer) {
+  var tabs   = tabContainer.querySelectorAll('.tab');
+  var answer = tabContainer.closest('.exercise-answer');
+  var blocks = answer.querySelectorAll('.code-block');
 
-  tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      tabs.forEach(t => t.classList.remove("active"));
-      blocks.forEach(b => b.classList.remove("active"));
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      tabs.forEach(function (t)  { t.classList.remove('active'); });
+      blocks.forEach(function (b) { b.classList.remove('active'); });
 
-      tab.classList.add("active");
+      tab.classList.add('active');
 
-      const target = tab.dataset.tab;
-      tabContainer.parentElement
-        .querySelector(`[data-content="${target}"]`)
-        .classList.add("active");
+      var blocoAlvo = answer.querySelector('[data-content="' + tab.dataset.tab + '"]');
+      if (blocoAlvo) blocoAlvo.classList.add('active');
     });
   });
 });
-
 // Copiar codigo
 document.querySelectorAll(".copy-btn").forEach(btn => {
   btn.addEventListener("click", function(){

@@ -110,7 +110,7 @@ colinha-frontend
 
 # 👨‍💻 Autor
 
-Projeto desenvolvido por **Wayna Luna**
+Projeto desenvolvido por **Wayna Luna** e outros
 
 🎓 Estudante de Engenharia de Software
 💻 Criador de conteúdo sobre programação
